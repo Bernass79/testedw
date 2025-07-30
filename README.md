@@ -2,7 +2,7 @@ local rekeste = http and http.request or syn and syn.request or request
 
 hookfunction(rekeste, function(args)
     if args.Url:find("scriptsbinsauth.vercel.app/api/verify%-key") then
-        print("hookfunction bem do basic")
+     
 
         return {
             StatusCode = 200,
@@ -19,7 +19,6 @@ hookfunction(rekeste, function(args)
     return rekeste(args)
 end)
 
-print("hookfunction bem do basic")
 
 task.wait(1)
 
